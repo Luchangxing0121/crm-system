@@ -1,0 +1,267 @@
+:root {
+  --button-outline: #0033A0;
+  --badge-outline: #E2E8F0;
+
+  /* Automatic computation of border around primary / danger buttons */
+  --opaque-button-border-intensity: -15;
+
+  /* Backgrounds applied on top of other backgrounds when hovered/active */
+  --elevate-1: rgba(0, 51, 160, 0.06);
+  --elevate-2: rgba(0, 51, 160, 0.12);
+
+  /* ===== Core tokens: Corporate Blueprint ===== */
+  --background: #F4F7F9;
+  --foreground: #1A1A1A;
+  --card: #FFFFFF;
+  --card-foreground: #1A1A1A;
+  --popover: #FFFFFF;
+  --popover-foreground: #1A1A1A;
+  --primary: #0033A0;
+  --primary-foreground: #ffffff;
+  --secondary: #CCE0FF;
+  --secondary-foreground: #0033A0;
+  --muted: #F8FAFC;
+  --muted-foreground: #94A3B8;
+  --accent: #0033A0;
+  --accent-foreground: #ffffff;
+  --info: #0066FF;
+  --info-foreground: #ffffff;
+  --destructive: #EF4444;
+  --destructive-foreground: #ffffff;
+  --success: #10B981;
+  --success-foreground: #ffffff;
+  --warning: #F59E0B;
+  --warning-foreground: #ffffff;
+  --border: #E2E8F0;
+  --input: #E2E8F0;
+  --ring: #0033A0;
+
+  /* Chart palette: monochrome blue 5-step (accent is chart-1) */
+  --chart-1: #0033A0;
+  --chart-2: #0066FF;
+  --chart-3: #4D94FF;
+  --chart-4: #99C2FF;
+  --chart-5: #CCE0FF;
+
+  /* Sidebar tokens */
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #1A1A1A;
+  --sidebar-primary: #0033A0;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #F1F5F9;
+  --sidebar-accent-foreground: #0033A0;
+  --sidebar-border: #E2E8F0;
+  --sidebar-ring: #0033A0;
+
+  /* Computed borders */
+  --primary-border: #002680;
+  --secondary-border: #99C2FF;
+  --destructive-border: #DC2626;
+  --accent-border: #002680;
+  --muted-border: #E2E8F0;
+
+  /* Typography */
+  --font-sans:
+    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'PingFang SC', 'Microsoft YaHei', 'Noto Sans SC',
+    'LarkHackSafariFont', 'LarkEmojiFont', 'LarkChineseQuote',
+    Arial, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-serif:
+    'Inter', Georgia, 'Times New Roman', Times, serif;
+  --font-mono:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  --radius: 0px;
+
+  /* Soft shadows — blueprint style */
+  --shadow-2xs: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+  --shadow-xs: 0 1px 3px 0 rgba(0, 0, 0, 0.06);
+  --shadow-sm: 0 1px 4px 0 rgba(0, 0, 0, 0.06);
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.07);
+  --shadow-md: 0 4px 12px -2px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 10px 20px -5px rgba(0, 0, 0, 0.08);
+  --shadow-xl: 0 16px 32px -8px rgba(0, 0, 0, 0.1);
+  --shadow-2xl: 0 24px 48px -12px rgba(0, 0, 0, 0.12);
+
+  --tracking-normal: 0em;
+  --spacing: 0.25rem;
+
+  /* Blueprint-specific tokens */
+  --header-start: #001D4A;
+  --header-end: #004B93;
+  --success-bg: #ECFDF5;
+  --danger-bg: #FEF2F2;
+  --warning-bg: #FFFBEB;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-info: var(--info);
+  --color-info-foreground: var(--info-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', 'Microsoft YaHei', 'Noto Sans SC', sans-serif;
+  --font-serif: 'Inter', Georgia, serif;
+  --font-mono: var(--font-mono);
+
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+
+  --shadow-2xs: var(--shadow-2xs);
+  --shadow-xs: var(--shadow-xs);
+  --shadow-sm: var(--shadow-sm);
+  --shadow: var(--shadow);
+  --shadow-md: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
+  --shadow-xl: var(--shadow-xl);
+  --shadow-2xl: var(--shadow-2xl);
+}
+
+@layer utilities {
+  /* Hide search cancel button */
+  input[type="search"]::-webkit-search-cancel-button {
+    @apply hidden;
+  }
+
+  /* Placeholder styling for contentEditable div */
+  [contenteditable][data-placeholder]:empty::before {
+    content: attr(data-placeholder);
+    color: var(--muted-foreground);
+    pointer-events: none;
+  }
+
+  .no-default-hover-elevate {}
+  .no-default-active-elevate {}
+
+  /**
+   * Toggleable backgrounds go behind the content. Hoverable/active goes on top.
+   */
+  .toggle-elevate::before,
+  .toggle-elevate-2::before {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    inset: 0px;
+    border-radius: inherit;
+    z-index: -1;
+  }
+
+  .toggle-elevate.toggle-elevated::before {
+    background-color: var(--elevate-2);
+  }
+
+  .border.toggle-elevate::before {
+    inset: -1px;
+  }
+
+  :where(.hover-elevate:not(.no-default-hover-elevate)),
+  :where(.active-elevate:not(.no-default-active-elevate)),
+  :where(.hover-elevate-2:not(.no-default-hover-elevate)),
+  :where(.active-elevate-2:not(.no-default-active-elevate)) {
+    position: relative;
+    z-index: 0;
+  }
+
+  .hover-elevate:not(.no-default-hover-elevate)::after,
+  .active-elevate:not(.no-default-active-elevate)::after,
+  .hover-elevate-2:not(.no-default-hover-elevate)::after,
+  .active-elevate-2:not(.no-default-active-elevate)::after {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    inset: 0px;
+    border-radius: inherit;
+    z-index: 999;
+  }
+
+  .hover-elevate:hover:not(.no-default-hover-elevate)::after,
+  .active-elevate:active:not(.no-default-active-elevate)::after {
+    background-color: var(--elevate-1);
+  }
+
+  .hover-elevate-2:hover:not(.no-default-hover-elevate)::after,
+  .active-elevate-2:active:not(.no-default-active-elevate)::after {
+    background-color: var(--elevate-2);
+  }
+
+  .border.hover-elevate:not(.no-hover-interaction-elevate)::after,
+  .border.active-elevate:not(.no-active-interaction-elevate)::after,
+  .border.hover-elevate-2:not(.no-hover-interaction-elevate)::after,
+  .border.active-elevate-2:not(.no-active-interaction-elevate)::after,
+  .border.hover-elevate:not(.no-hover-interaction-elevate)::after {
+    inset: -1px;
+  }
+
+  /* ===== Blueprint utilities ===== */
+
+  /* ReportCard base: zero-radius + 3px top accent border + shadow-md */
+  .report-card {
+    @apply bg-card rounded-none border-t-[3px] border-t-[#0033A0] shadow-md;
+  }
+
+  /* Section header: numbered micro-label + subtitle */
+  .section-label {
+    @apply text-[11px] font-black uppercase tracking-[0.15em] text-primary mb-1;
+  }
+
+  .section-subtitle {
+    @apply text-[10px] font-medium text-muted-foreground;
+  }
+
+  /* Data table headers */
+  .data-table-header {
+    @apply text-[9px] font-black uppercase text-muted-foreground;
+  }
+
+  /* Thin border (hairline) */
+  .thin-border {
+    border-color: var(--border);
+  }
+
+  /* Blueprint verdict card — accent inverted */
+  .verdict-card {
+    @apply bg-primary text-primary-foreground rounded-none border-t-[3px] border-t-primary/50 shadow-md p-6;
+  }
+
+  /* Micro uppercase label (KPI / status) */
+  .micro-label {
+    @apply text-[9px] font-black uppercase tracking-tight text-muted-foreground;
+  }
+}
