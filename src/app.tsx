@@ -31,6 +31,7 @@ import QuotationFormPage from "@/pages/QuotationFormPage/QuotationFormPage";
 import QuotationNewPage from "@/pages/QuotationNewPage/QuotationNewPage";
 import TaskListPage from "@/pages/TaskListPage/TaskListPage";
 import TaskDetailPage from "@/pages/TaskDetailPage/TaskDetailPage";
+import EquipmentMaintenancePage from "@/pages/EquipmentMaintenancePage";
 
 export default function App() {
   return (
@@ -52,6 +53,7 @@ export default function App() {
           <Route path="projects/:id" element={<ProjectDetailPage />} />
           <Route path="products" element={<ProductListPage />} />
           <Route path="products/:id" element={<ProductDetailPage />} />
+          <Route path="equipment" element={<EquipmentMaintenancePage />} />
           <Route path="quotations" element={<QuotationListPage />} />
           <Route path="quotations/new" element={<QuotationNewPage />} />
           <Route path="quotations/:id" element={<QuotationDetailPage />} />

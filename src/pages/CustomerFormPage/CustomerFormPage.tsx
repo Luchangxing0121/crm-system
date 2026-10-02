@@ -39,7 +39,7 @@ import {
   FormLabel,
   FormMessage,
 } from '@/components/ui/form';
-import { type ICustomer } from '@/data/customers';
+import { type ICustomer, type IAttachment } from '@/data/customers';
 import { type IContact } from '@/data/contacts';
 import { useCustomers, useContacts, customerMutations, contactMutations } from '@/hooks/use-crm-store';
 import { customerApi } from '@/services/api';
@@ -293,7 +293,7 @@ function CustomerFormInner({ routeId: id, isEdit, customer, contactsAll }: Custo
     setSubmitting(true);
     try {
       // 附件转为元数据存入客户档案（详情页附件区可见）
-      const attachmentMeta = attachments.map((f) => ({
+      const attachmentMeta: IAttachment[] = attachments.map((f) => ({
         id: f.id,
         name: f.name,
         size: f.size,
@@ -319,12 +319,12 @@ function CustomerFormInner({ routeId: id, isEdit, customer, contactsAll }: Custo
 
       if (isEdit && id) {
         // 编辑：更新客户（有新附件时先取原档案合并，避免覆盖已有附件）
-        let mergedAttachments: unknown[] | undefined;
+        let mergedAttachments: IAttachment[] | undefined;
         if (attachmentMeta.length > 0) {
           try {
             const existing = await customerApi.detail(id);
             const prevAtts = Array.isArray((existing as { attachments?: unknown[] })?.attachments)
-              ? (existing as { attachments: unknown[] }).attachments
+              ? ((existing as { attachments: unknown[] }).attachments as IAttachment[])
               : [];
             mergedAttachments = [...prevAtts, ...attachmentMeta];
           } catch {

@@ -21,6 +21,7 @@ import {
   Package,
   Receipt,
   ClipboardList,
+  Wrench,
 } from 'lucide-react';
 import { useAuth } from '@/contexts/AuthContext';
 
@@ -33,6 +34,7 @@ const NAV_ITEMS = [
   { path: '/customers', label: '客户管理', icon: Users },
   { path: '/contacts', label: '联系人管理', icon: User },
   { path: '/products', label: '商品库', icon: Package },
+  { path: '/equipment', label: '设备运维', icon: Wrench },
   { path: '/reports', label: '统计报表', icon: BarChart3 },
   { path: '/system', label: '系统管理', icon: Settings },
   { path: '/contracts', label: '合同订单', icon: FileText },
